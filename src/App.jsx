@@ -18,7 +18,7 @@ import UploadResource from "./pages/UploadResource";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/JIT-ShareHub/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
