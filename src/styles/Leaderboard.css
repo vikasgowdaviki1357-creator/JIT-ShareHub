@@ -1,0 +1,235 @@
+.leaderboard-page{
+  padding:40px;
+  min-height:100vh;
+  background:#f8fafc;
+}
+
+/* ===== HERO BANNER ===== */
+
+.leaderboard-hero{
+  position:relative;
+  overflow:hidden;
+
+  background: linear-gradient(135deg, #0f1235 0%, #1e3a8a 45%, #4338ca 100%);
+  border-radius:28px;
+
+  padding:60px 50px;
+  text-align:center;
+
+  box-shadow: 0 20px 50px rgba(67,56,202,.25);
+
+  margin-bottom:40px;
+
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.leaderboard-hero::before{
+  content:"";
+  position:absolute;
+  top:-60px;
+  right:-60px;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background: rgba(255,255,255,.06);
+}
+
+.leaderboard-hero::after{
+  content:"";
+  position:absolute;
+  bottom:-80px;
+  right:120px;
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  background: rgba(255,255,255,.05);
+}
+
+.hero-badge{
+  display:inline-block;
+  background: rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+  color:#e0e7ff;
+
+  padding:8px 20px;
+  border-radius:50px;
+
+  font-size:0.85rem;
+  font-weight:700;
+  letter-spacing:1px;
+
+  margin-bottom:25px;
+  backdrop-filter: blur(6px);
+
+  animation: fadeInUp 0.6s ease-out 0.1s backwards;
+}
+
+.hero-title{
+  color:#ffffff;
+  font-size:3.2rem;
+  font-weight:800;
+  margin:0;
+
+  animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+.hero-subtitle{
+  display:inline-block;
+  color:#c7d2fe;
+  font-size:1.6rem;
+  font-weight:500;
+
+  margin:10px 0 0;
+  padding-bottom:14px;
+
+  border-bottom: 2px solid rgba(199,210,254,.4);
+
+  animation: fadeInUp 0.6s ease-out 0.3s backwards;
+}
+
+.hero-desc{
+  color:#dbeafe;
+  font-size:1.05rem;
+  line-height:1.6;
+
+  max-width:520px;
+  margin:25px auto 0;
+
+  animation: fadeInUp 0.6s ease-out 0.4s backwards;
+}
+
+.hero-icon{
+  position:absolute;
+  top:50%;
+  right:60px;
+  transform: translateY(-50%);
+
+  font-size:5rem;
+
+  animation: float 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,.25));
+}
+
+@media (max-width: 768px){
+  .hero-icon{
+    display:none;
+  }
+}
+
+/* ===== LEADERBOARD LIST ===== */
+
+.leaderboard-list{
+  max-width:800px;
+  margin:auto;
+}
+
+.leader-card{
+  background:white;
+  padding:20px 25px;
+  border-radius:20px;
+  margin-bottom:20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.08);
+
+  border-left: 5px solid #4338ca;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.leaderboard-list .leader-card:nth-child(1){ animation-delay: 0.05s; }
+.leaderboard-list .leader-card:nth-child(2){ animation-delay: 0.15s; }
+.leaderboard-list .leader-card:nth-child(3){ animation-delay: 0.25s; }
+.leaderboard-list .leader-card:nth-child(4){ animation-delay: 0.35s; }
+.leaderboard-list .leader-card:nth-child(5){ animation-delay: 0.45s; }
+
+.leader-card:hover{
+  transform: translateX(8px) translateY(-4px);
+  box-shadow: 0 20px 40px rgba(67,56,202,.18);
+}
+
+.leader-card h2{
+  color:#4338ca;
+  font-size:1.6rem;
+  min-width:50px;
+}
+
+.leader-card h3{
+  color:#0f172a;
+  font-size:1.3rem;
+  flex:1;
+  text-align:left;
+  margin-left:20px;
+}
+
+.leader-card p{
+  color:#475569;
+  font-weight:600;
+}
+
+/* Top 3 highlights */
+
+.rank-gold{
+  border-left-color:#f59e0b;
+  background: linear-gradient(135deg, #fffbeb, #ffffff);
+}
+
+.rank-gold h2{
+  color:#f59e0b;
+}
+
+.rank-silver{
+  border-left-color:#94a3b8;
+  background: linear-gradient(135deg, #f8fafc, #ffffff);
+}
+
+.rank-silver h2{
+  color:#64748b;
+}
+
+.rank-bronze{
+  border-left-color:#c2703d;
+  background: linear-gradient(135deg, #fef3ec, #ffffff);
+}
+
+.rank-bronze h2{
+  color:#c2703d;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fadeInDown{
+  from{
+    opacity:0;
+    transform: translateY(-20px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp{
+  from{
+    opacity:0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float{
+  0%, 100%{
+    transform: translateY(-50%) translateY(0) rotate(0deg);
+  }
+  50%{
+    transform: translateY(-50%) translateY(-15px) rotate(5deg);
+  }
+}

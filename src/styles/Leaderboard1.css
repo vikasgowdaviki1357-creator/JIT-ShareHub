@@ -1,0 +1,30 @@
+.leaderboard-page{
+  padding:40px;
+  min-height:100vh;
+  background:#f8fafc;
+}
+
+.leaderboard-page h1{
+  text-align:center;
+  color:#2563eb;
+  margin-bottom:40px;
+}
+
+.leaderboard-list{
+  max-width:800px;
+  margin:auto;
+}
+
+.leader-card{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.08);
+}

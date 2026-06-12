@@ -1,0 +1,560 @@
+.dashboard{
+  display:flex;
+  min-height:100vh;
+  background:#f1f5f9;
+}
+
+/* Sidebar */
+
+.sidebar{
+
+  width:260px;
+
+  background:
+  linear-gradient(
+    180deg,
+    #0f172a,
+    #1e3a8a
+  );
+
+  color:white;
+}
+.sidebar h2{
+  margin-bottom:40px;
+  text-align:center;
+  font-size:1.8rem;
+}
+
+.sidebar ul{
+  list-style:none;
+}
+
+.sidebar li{
+
+  padding:15px;
+
+  border-radius:12px;
+
+  transition:.3s;
+}
+
+.sidebar li:hover{
+
+  background:
+  rgba(255,255,255,.1);
+
+  transform:
+  translateX(8px);
+}
+.sidebar a{
+  text-decoration:none;
+  color:white;
+
+  display:block;
+
+  padding:14px 18px;
+
+  border-radius:12px;
+
+  transition:.3s;
+}
+
+.sidebar a:hover{
+  background:rgba(255,255,255,.1);
+
+  transform:translateX(6px);
+}
+.profile-summary{
+
+  background:
+  rgba(255,255,255,.75);
+
+  backdrop-filter:
+  blur(20px);
+
+  border:
+  1px solid rgba(
+    255,
+    255,
+    255,
+    .3
+  );
+}
+/* Main */
+
+.main-content{
+  flex:1;
+  padding:40px;
+}
+
+/* Welcome Card */
+
+.welcome-card{
+
+  background:
+  linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  border-radius:30px;
+
+  padding:50px;
+
+  color:white;
+
+  margin-bottom:30px;
+
+  box-shadow:
+  0 20px 40px rgba(
+    37,
+    99,
+    235,
+    .25
+  );
+}
+
+.welcome-content{
+  max-width:600px;
+}
+
+.welcome-badge{
+
+  display:inline-block;
+
+  background:
+  rgba(255,255,255,.2);
+
+  padding:8px 18px;
+
+  border-radius:20px;
+
+  margin-bottom:20px;
+
+  font-size:.9rem;
+}
+
+.welcome-card h1{
+
+  font-size:3rem;
+
+  line-height:1.1;
+
+  margin-bottom:15px;
+}
+
+.welcome-card p{
+
+  font-size:1.1rem;
+
+  opacity:.9;
+
+  line-height:1.7;
+}
+/* Stats Cards */
+
+.cards{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+
+  gap:25px;
+
+  margin-bottom:40px;
+}
+
+.card{
+
+  border-radius:24px;
+
+  padding:30px;
+
+  color:white;
+
+  transition:.4s;
+
+  cursor:pointer;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.card:nth-child(1){
+  background:linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+}
+
+.card:nth-child(2){
+  background:linear-gradient(
+    135deg,
+    #7c3aed,
+    #9333ea
+  );
+}
+
+.card:nth-child(3){
+  background:linear-gradient(
+    135deg,
+    #06b6d4,
+    #0891b2
+  );
+}
+
+.card:nth-child(4){
+  background:linear-gradient(
+    135deg,
+    #f59e0b,
+    #f97316
+  );
+}
+.card:hover{
+
+  transform:
+  translateY(-10px)
+  scale(1.03);
+
+  box-shadow:
+  0 20px 40px rgba(
+    37,
+    99,
+    235,
+    .25
+  );
+}
+
+.card h2{
+  color:white;
+}
+
+.card p{
+  color:white;
+}
+/* Quick Actions */
+
+.quick-actions{
+
+  display:flex;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:40px;
+}
+
+.quick-actions a{
+  text-decoration:none;
+}
+
+.quick-actions button{
+
+  border:none;
+
+  background:
+  linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  color:white;
+
+  padding:15px 25px;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:.3s;
+}
+
+.quick-actions button:hover{
+
+  transform:
+  translateY(-5px);
+
+  box-shadow:
+  0 15px 30px rgba(37,99,235,.25);
+}
+
+/* Activity Feed */
+
+.activity-section{
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:25px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+}
+
+.activity-section h2{
+
+  margin-bottom:25px;
+
+  color:#0f172a;
+}
+
+.activity-card{
+
+  padding:18px;
+
+  margin-bottom:15px;
+
+  border-left:5px solid #2563eb;
+
+  background:#f8fafc;
+
+  border-radius:12px;
+
+  transition:.3s;
+}
+
+.activity-card:hover{
+
+  transform:
+  translateX(8px);
+}
+
+.activity-card p{
+
+  margin-bottom:5px;
+
+  font-weight:600;
+}
+
+.activity-card small{
+  color:#64748b;
+}
+
+/* Logout */
+
+.logout-btn{
+
+  width:100%;
+
+  margin-top:25px;
+
+  background:#ef4444;
+
+  color:white;
+
+  border:none;
+
+  padding:14px;
+
+  border-radius:12px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:.3s;
+}
+
+.logout-btn:hover{
+
+  background:#dc2626;
+
+  transform:translateY(-3px);
+}
+.profile-summary{
+
+  background:white;
+
+  padding:25px;
+
+  border-radius:20px;
+
+  margin-bottom:30px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:20px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+}
+
+.profile-avatar{
+
+  width:70px;
+  height:70px;
+
+  border-radius:50%;
+
+  background:
+  linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed
+  );
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-size:30px;
+
+  color:white;
+}
+.recent-widget{
+
+  margin-top:30px;
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:25px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+}
+
+.widget-item{
+
+  padding:15px;
+
+  margin-top:10px;
+
+  background:#f8fafc;
+
+  border-radius:12px;
+
+  transition:.3s;
+}
+
+.widget-item:hover{
+
+  background:#eff6ff;
+
+  transform:translateX(8px);
+}
+.analytics-row{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap:25px;
+
+  margin-bottom:30px;
+}
+
+.analytics-card{
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:25px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+}
+
+.analytics-card h3{
+
+  color:#64748b;
+
+  margin-bottom:15px;
+}
+
+.analytics-number{
+
+  font-size:3rem;
+
+  font-weight:700;
+
+  color:#2563eb;
+
+  margin-bottom:20px;
+}
+
+.progress-bar{
+
+  width:100%;
+
+  height:12px;
+
+  background:#e2e8f0;
+
+  border-radius:20px;
+
+  overflow:hidden;
+}
+
+.progress-fill{
+
+  height:100%;
+
+  background:
+  linear-gradient(
+    90deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  border-radius:20px;
+}
+
+.progress-fill.purple{
+
+  background:
+  linear-gradient(
+    90deg,
+    #7c3aed,
+    #9333ea
+  );
+}
+.sidebar-logo{
+
+  font-size:2rem;
+
+  font-weight:800;
+
+  margin-bottom:50px;
+
+  color:white;
+}
+.chart-card{
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:25px;
+
+  margin-top:30px;
+
+  box-shadow:
+  0 10px 30px rgba(
+    0,
+    0,
+    0,
+    .08
+  );
+}
+
+.chart-card h2{
+
+  margin-bottom:20px;
+
+  color:#0f172a;
+}
