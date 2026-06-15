@@ -1,14 +1,28 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import OpenAI from "openai";
 
-const genAI = new GoogleGenerativeAI(
-  import.meta.env.VITE_GEMINI_API_KEY
-);
-
-const model = genAI.getGenerativeModel({
-  model: "gemini-2.5-flash"
+const client = new OpenAI({
+  apiKey: import.meta.env.VITE_GROQ_API_KEY,
+  baseURL: "https://api.groq.com/openai/v1",
+  dangerouslyAllowBrowser: true,
 });
 
 export async function askGemini(prompt) {
-  const result = await model.generateContent(prompt);
-  return result.response.text();
+  try {
+    const completion = await client.chat.completions.create({
+      model: "llama-3.3-70b-versatile",
+      messages: [
+        {
+          role: "user",
+          content: prompt,
+        },
+      ],
+      temperature: 0.7,
+      max_tokens: 1024,
+    });
+
+    return completion.choices[0].message.content;
+  } catch (error) {
+    console.error("Groq Error:", error);
+    return "⚠️ Sorry, I'm unable to respond right now. Please try again.";
+  }
 }

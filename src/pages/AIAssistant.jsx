@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./../styles/AIAssistant.css";
-import { askGemini } from "../services/gemini";
+import { askGroq } from "../services/groq";
 
 function AIAssistant() {
 
@@ -213,7 +213,7 @@ function AIAssistant() {
 
       // ===== Gemini =====
 
-      const aiResponse = await askGemini(`
+      const aiResponse = await askGroq(`
 You are JIT ShareHub AI Assistant.
 
 Features:
@@ -247,7 +247,7 @@ ${userQuestion}
         {
           type: "ai",
           text:
-            "⚠️ Gemini is busy right now. Please try again in a few seconds."
+            "⚠️ Unable to connect to the AI assistant. Please try again.."
         }
       ]);
     }
