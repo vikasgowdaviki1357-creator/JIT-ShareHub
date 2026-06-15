@@ -1,5 +1,5 @@
 import "./../styles/Dashboard.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -21,6 +21,7 @@ ChartJS.register(
 );
 
 function Dashboard() {
+  const navigate = useNavigate();
 
   const user =
     JSON.parse(localStorage.getItem("currentUser"));
@@ -66,12 +67,9 @@ function Dashboard() {
 };
 
   const handleLogout = () => {
-
     localStorage.removeItem("currentUser");
-
-    window.location.href = "/login";
-  };
-
+    navigate("/login");
+};
   return (
 
     <div className="dashboard">
